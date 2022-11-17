@@ -7,20 +7,17 @@
     <div>
       <div>
         <%= link_to "Go Back", movies_path %>
-          Go back
-        </a>
+       
       </div>
 
       <div>
-        <%= link_to "Edit movie", Movie.first %>
+        <%= link_to "Edit movie", edit_movie_url(@the_movie) %>
      
       </div>
 
       <div>
-        <%= <%= link_to 'Delete movie', delete %>%>
-        <a href="<%=movie_path(@the_movie) %>" data-method="delete">
-          Delete movie
-        </a>
+      <%=link_to "delete", movie_path(@the_movie), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn=primary" %>
+      
       </div>
     </div>
 
