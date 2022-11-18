@@ -1,1 +1,27 @@
-<h1>Show</h1>
+ <div>
+     <div>
+        <h1>Director Details </h1>
+
+    <div>
+      <div>
+         <%= link_to "Go Back", directors_path %>
+      </div>
+      <div>
+        <%= link_to "Edit director", edit_director_url(@director) %>
+      </div>
+      <div>
+        <%=link_to "delete", director_path(@director), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn=primary" %>
+      </div>
+    <div>
+    <dl>
+      <dt>Name</dt>
+        <dd><%= @director.name %></dd>
+      <dt>Date of Birth</dt>
+        <dd><%= @director.dob %> </dd>
+      <dt>Created at</dt>
+        <dd><%= time_ago_in_words(@director.created_at)%> ago</dd>
+      <dt>Updated at</dt>
+        <dd><%= time_ago_in_words(@director.updated_at) %>ago</dd>
+    </dl>
+  </div>
+</div>
