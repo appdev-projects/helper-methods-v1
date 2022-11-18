@@ -1,7 +1,7 @@
 <div>
   <div>
     <h1>
-      Movie #<%= @the_movie.id %> details
+      Movie #<%= @movie.id %> details
     </h1>
 
     <div>
@@ -11,12 +11,12 @@
       </div>
 
       <div>
-        <%= link_to "Edit movie", edit_movie_url(@the_movie) %>
+        <%= link_to "Edit movie", edit_movie_url(@movie) %>
      
       </div>
 
       <div>
-      <%=link_to "delete", movie_path(@the_movie), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn=primary" %>
+      <%=link_to "delete", movie_path(@movie), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn=primary" %>
       
       </div>
     </div>
@@ -26,28 +26,28 @@
         Title
       </dt>
       <dd>
-        <%= @the_movie.title %>
+        <%= @movie.title %>
       </dd>
 
       <dt>
         Description
       </dt>
       <dd>
-        <%= @the_movie.description %>
+        <%= @movie.description %>
       </dd>
 
       <dt>
         Created at
       </dt>
       <dd>
-        <%= time_ago_in_words(@the_movie.created_at) %> ago
+        <%= time_ago_in_words(@movie.created_at) %> ago
       </dd>
 
       <dt>
         Updated at
       </dt>
       <dd>
-        <%= time_ago_in_words(@the_movie.updated_at) %> ago
+        <%= time_ago_in_words(@movie.updated_at) %> ago
       </dd>
     </dl>
   </div>
