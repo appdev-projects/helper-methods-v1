@@ -5,6 +5,22 @@ Rails.application.routes.draw do
 
   root "movies#index"
 
+  #Routes for Director resource:
+
+  get "/directors", controller: "directors", action: "index"
+
+  post "/directors", controller: "directors", action: "create"
+
+  get "/directors/new", controller: "directors", action: "new",  as: :new_director
+
+  get "/directors/:id", controller: "directors", action: "show", as: :director
+
+  patch "/directors/:id", controller: "directors", action:  "update" 
+  
+  get "/directors/:id/edit", controller: "directors", action: "edit", as: :edit_director
+
+  delete "/directors/:id", controller: "directors", action: "destroy"
+
   # Routes for the Movie resource:
 
   # CREATE
