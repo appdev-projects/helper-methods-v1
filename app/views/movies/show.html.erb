@@ -11,16 +11,16 @@
       </div>
 
       <div>
-        <%= link_to "Edit movie", edit_movie_url(@movie) %>
+        <%= link_to "Update movie", edit_movie_url(@movie) %>
      
       </div>
 
       <div>
-      <%=link_to "delete", movie_path(@movie), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn=primary" %>
+      <%=link_to "Delete movie", movie_path(@movie), method: :delete,  class: "btn btn=primary" %>
       
       </div>
     </div>
-
+    
     <dl>
       <dt>
         Title
@@ -35,7 +35,6 @@
       <dd>
         <%= @movie.description %>
       </dd>
-
       <dt>
         Created at
       </dt>
